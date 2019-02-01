@@ -25,7 +25,7 @@ public class TraineeREST {
 	
 	@Path("/getAllTraineesInClassroom")
 	@GET
-	@Produces({"application.json"})
+	@Produces({"application/json"})
 	public String getAllTraineesInClassroom(Long id) {
 		return business.getAllTraineesInClassroom(id);
 	}

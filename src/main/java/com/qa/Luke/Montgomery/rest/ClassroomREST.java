@@ -9,7 +9,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 
 import com.qa.Luke.Montgomery.business.ClassroomBusInterface;
-
+@Path("/classroom")
 public class ClassroomREST {
 	
 	@Inject
