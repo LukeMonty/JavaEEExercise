@@ -12,10 +12,12 @@ public class Trainee {
 	@Id
 	private Long id;
 	private String name;
+	private Long classroomId;
 	
-	public Trainee(Long id, String name) {
+	public Trainee(Long id, String name, Long classroomId) {
 		this.id = id;
 		this.name = name;
+		this.classroomId = classroomId;
 	}
 	public Trainee() {
 		
