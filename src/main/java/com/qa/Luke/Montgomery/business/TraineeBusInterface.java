@@ -1,9 +1,6 @@
-package com.qa.Luke.Montgomery.persistence.repository;
+package com.qa.Luke.Montgomery.business;
 
-import com.qa.Luke.Montgomery.persistence.domain.Classroom;
-import com.qa.Luke.Montgomery.persistence.domain.Trainee;
-
-public interface TraineeInterface {
+public interface TraineeBusInterface {
 	
 	public String getAllTrainees();
 	public String getAllTraineesInClassroom(Long id);
@@ -11,5 +8,5 @@ public interface TraineeInterface {
 	public String createTrainee(String trainee);
 	public String removeTrainee(Long id);
 	
-	
+
 }
