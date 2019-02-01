@@ -36,17 +36,24 @@ public class ClassroomDBRepo implements ClassroomInterface {
 	public String createNewClassroom(String classroom) {
 		Classroom newClassroom = json.getObjectForJSON(classroom, Classroom.class);
 		manager.persist(newClassroom);
-		return null;
+		return "New Classroom made";
 	}
-
+	@Transactional(REQUIRED)
 	public String changeTrainer(Long id, String updatedClassroom) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Classroom updated = json.getObjectForJSON(updatedClassroom, Classroom.class);
+		manager.createQuery("UPDATE CLASSROOM SET trainer = " + updatedClassroom + " WHERE id = " + id);
+		return "Successfully updated";
 	}
-
+	@Transactional(REQUIRED)
 	public String removeClassroom(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		Classroom c = manager.find(Classroom.class, id);
+		if(manager.contains(c)) {
+			return "Classroom " + c + " has been removed";
+		} else {
+			return "Classroom doesn't exist";
+		}
+		
 	}
 
 }
