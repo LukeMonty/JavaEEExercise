@@ -30,7 +30,7 @@ public class TraineeImpl implements TraineeBusInterface {
 	}
 
 	@Override
-	public String removeTrainee() {
+	public String removeTrainee(Long id) {
 		return repo.removeTrainee(id);
 	}
 
