@@ -3,6 +3,7 @@ package com.qa.Luke.Montgomery.persistence.repository;
 import static javax.transaction.Transactional.TxType.REQUIRED;
 import static javax.transaction.Transactional.TxType.SUPPORTS;
 
+import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -13,6 +14,7 @@ import com.qa.Luke.Montgomery.persistence.domain.Trainee;
 import com.qa.Luke.Montgomery.util.*;
 
 @Transactional(SUPPORTS)
+@Default
 public class TraineeDBRepo implements TraineeInterface {
 	@PersistenceContext(unitName = "primary")
 	private EntityManager manager;

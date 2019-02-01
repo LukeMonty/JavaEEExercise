@@ -18,7 +18,7 @@ public class TraineeREST {
 	
 	@Path("/getAllTrainees")
 	@GET
-	@Produces({"application.json"})
+	@Produces({"application/json"})
 	public String getAllAccounts() {
 		return business.getAllTrainees();
 	}
@@ -32,21 +32,21 @@ public class TraineeREST {
 	
 	@Path("/ammendTrainee")
 	@PUT
-	@Produces({"application.json"})
+	@Produces({"application/json"})
 	public String amendTrainee(Long id, String updatedTrainee) {
 		return business.amendTrainee(id, updatedTrainee);
 	}
 	
 	@Path("/createTrainee")
 	@POST
-	@Produces({"application.json"})
+	@Produces({"application/json"})
 	public String createTrainee(String trainee) {
 		return business.createTrainee(trainee);
 	}
 	
 	@Path("/removeTrainee")
 	@DELETE
-	@Produces({"application.json"})
+	@Produces({"application/json"})
 	public String removeTrainee(Long id) {
 		return business.removeTrainee(id);
 	}
